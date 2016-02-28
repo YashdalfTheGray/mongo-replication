@@ -1,0 +1,16 @@
+{
+  "name": "mongo-replication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-mongo1": "mongod --config ./mongod1.conf",
+    "start-mongo2": "mongod --config ./mongod2.conf",
+    "init": "mkdir mongo1 && mkdir mongo2 && mkdir mongo1/db && mkdir mongo2/db && touch mongo1/mongo.log && touch mongo2/mongo.log",
+    "rmrf-db": "rm -rf mongo1 && rm -rf mongo2",
+    "import-data": "mongoimport --host=127.0.0.1 --db test --collection restaurants --drop --file dataset.json"
+  },
+  "author": "",
+  "license": "ISC"
+}
